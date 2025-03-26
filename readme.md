@@ -1,1 +1,1 @@
-"# use http_log demo " 
+In this project, I utilized Splunk SIEM to analyze a sample HTTP log file in order to identify unusual activities that may indicate potential security threats. The goal is to detect various types of attacks, including brute force login attempts, Distributed Denial-of-Service (DDoS) attacks, and other anomalies. This is achieved by using Search Processing Language (SPL) queries in Splunk to perform detailed analysis and threat detection.
