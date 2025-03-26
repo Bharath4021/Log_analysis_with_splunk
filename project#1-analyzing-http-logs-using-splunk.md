@@ -34,7 +34,7 @@ index=* sourcetype=<your_source_type>
 ### Analysis of possible ddos attack 
 #### Find Multiple Requests from the Same IP (Potential DoS Attack)
 index=_* OR index=* sourcetype=http_log | stats count by src_ip | where count > 1000 | sort -count
-![result](image.png)
+
 #### Detect DDoS: Many IPs Targeting the Same Server
 index=* sourcetype="http_log" | stats count by src_ip, dest_ip | eventstats dc(src_ip) AS unique_attackers by dest_ip | where unique_attackers > 50 | sort -count
 #### Analyze Traffic Volume Per Second (DDoS Flood)
