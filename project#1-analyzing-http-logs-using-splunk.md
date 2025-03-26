@@ -34,6 +34,7 @@ index=* sourcetype=<your_source_type>
 ### Analysis of possible ddos attack 
 #### Find Multiple Requests from the Same IP (Potential DoS Attack)
 index=_* OR index=* sourcetype=http_log | stats count by src_ip | where count > 1000 | sort -count
+![result](image.png)
 #### Detect DDoS: Many IPs Targeting the Same Server
 index=* sourcetype="http_log" | stats count by src_ip, dest_ip | eventstats dc(src_ip) AS unique_attackers by dest_ip | where unique_attackers > 50 | sort -count
 #### Analyze Traffic Volume Per Second (DDoS Flood)
@@ -45,9 +46,8 @@ index=* sourcetype="http_log"| index=* sourcetype="http_log" | stats count by ur
 ### Analysis of possible brute force attacks
 #### Detect Multiple Failed Login Attempts from Same IP
 index=* sourcetype="http.log" status="404" OR "401” | stats count by src_ip, dest_ip  | eventstats dc(src_ip) as attacker by dest_ip | where attacker > 1
-or 
-index=* sourcetype="http_log” | where like(status, "401") OR like(status, "403")   | stats count by src_ip, user | where count > 10  | sort -count
 
+index=* sourcetype="http_log” | where like(status, "401") OR like(status, "403")   | stats count by src_ip, user | where count > 10  | sort -count
 #### Identify Rapid Repeated Login Attempts
 index=* sourcetype="http_log" | transaction src_ip user maxspan=30s maxevents=10 | where eventcount >= 10
 #### Find Brute-Force Attempts with Response Codes
