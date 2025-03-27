@@ -12,11 +12,11 @@ In this project, I will use Splunk SIEM to analyze DNS log files and detect pote
 - Basic understanding of SPL queries
 
 ## Steps to Upload Sample DNS Log Files to Splunk SIEM
-•	In the top menu, click on the "Settings" icon.
-•	Under the Data section, click on "Add Data."
-•	Select the "Upload" option and choose the DNS log file you wish to import.
-•	Choose the appropriate source type for the DNS log file. If no predefined source type exists, you can create a custom one.
-•	Verify the settings, ensure there are no errors, and confirm the upload of the DNS log file to Splunk.
+- In the top menu, click on the "Settings" icon.
+- Under the Data section, click on "Add Data."
+- Select the "Upload" option and choose the DNS log file you wish to import.
+- Choose the appropriate source type for the DNS log file. If no predefined source type exists, you can create a custom one.
+- Verify the settings, ensure there are no errors, and confirm the upload of the DNS log file to Splunk.
 
 
 ## Step to Verify Uploaded File
