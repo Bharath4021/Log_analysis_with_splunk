@@ -25,7 +25,7 @@ After uploading the FTP log files, I navigated to the Search app and ran a query
 ## Steps to Extract Fields from FTP Log Files
 - Navigate to Field Extractions in Splunk.
 - Select Extract New Fields.
-- Choose a sample event from the uploaded DNS logs.
+- Choose a sample event from the uploaded FTP logs.
 - Click on Regular Expression.
 - Identify the required fields and name them appropriately (e.g., IP Address, Status Code, Request Method, etc.).
 - Validate the extracted fields and save them.
