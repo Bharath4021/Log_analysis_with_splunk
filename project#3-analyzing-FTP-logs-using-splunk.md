@@ -8,10 +8,10 @@ In this project, I leveraged Splunk to analyze FTP logs for security insights. I
 
 ## Prerequisites
 - Installed and configured Splunk SIEM
-- Sample DNS log file
+- Sample FPT log file
 - Basic understanding of SPL queries
 
-## Steps to Upload Sample DNS Log Files to Splunk SIEM
+## Steps to Upload Sample FTP Log Files to Splunk SIEM
 - I logged into my Splunk instance via my browser using my admin/user credentials.
 - I navigated to the “Add Data” option (found under Settings > Data > Add Data) in the Splunk search bar.
 - I chose “Upload” (selecting “Files & Directories” for local files) and clicked “Browse” to locate my FTP log files.
