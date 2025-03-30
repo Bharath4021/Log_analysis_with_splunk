@@ -34,7 +34,7 @@ In this project, I worked with Teredo tunneling log files to explore its role in
 
 
 ## Step to Verify Uploaded File
-AAfter uploading the teredo log files, I navigated to the Search app and ran a query filtered by my chosen index and sourcetype (e.g., index=*_logs sourcetype= teredologs) to display sample events. I carefully reviewed the event details to ensure that the content, timestamps, and fields were correctly indexed and free of errors.
+After uploading the teredo log files, I navigated to the Search app and ran a query filtered by my chosen index and sourcetype (e.g., index=*_logs sourcetype= teredologs) to display sample events. I carefully reviewed the event details to ensure that the content, timestamps, and fields were correctly indexed and free of errors.
 
 ## Steps to Extract Fields from teredo tunnel Log Files
 - Navigate to Field Extractions in Splunk.
