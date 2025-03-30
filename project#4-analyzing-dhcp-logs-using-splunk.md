@@ -42,7 +42,7 @@ Next, the eval command is used to create a new field called Unauthorized. If the
 This query provides a clear and concise way to detect and track unauthorized devices in your network based on DHCP logs.
 
 ### Detecting Rogue DHCP Servers:
-- Rogue DHCP servers can assign unauthorized IPs or malicious configurations. The following query helps detect suspicious DHCP servers that may be rogue.
+Rogue DHCP servers can assign unauthorized IPs or malicious configurations. The following query helps detect suspicious DHCP servers that may be rogue.
 index=_* OR index=* sourcetype="dhcp.log file" | stats count by server_ip | where count > 1 | table server_ip, count
 - This query helps identify multiple DHCP servers that are being used within the network. It flags suspicious DHCP activity, where a device might be acting as a rogue server, potentially causing network issues or security risks.
 
@@ -54,7 +54,7 @@ index=_* OR index=* sourcetype="dhcp.log file"| stats count by client_ip | where
 - This Splunk query is designed to identify client IP addresses that have made more than 30 DHCP requests, which can be a sign of unusual or suspicious activity. The query starts by searching through all logs (index=*) for DHCP log entries (sourcetype="dhcp.log file"). The stats count by client_ip command then counts how many times each client IP appears in the logs, essentially showing how many DHCP requests were made by each device. Next, where count > 30 filter limits the results to only show those client IPs that have made more than 30 requests. This could indicate abnormal behavior, such as a DHCP starvation attack where an attacker tries to exhaust the DHCP server's available IP addresses. Finally, the table client_ip, count command displays the results in a table format, showing the client IP and the number of DHCP requests made by that IP. By running this query, you can easily identify devices that might be misbehaving or trying to overload the DHCP server. This is useful for network administrators to monitor unusual network activity or potential security threats.
 
 ## Conclusion
-- In this project, I successfully analyzed DHCP logs using Splunk to detect network anomalies, including unauthorized devices, rogue DHCP servers, and DHCP starvation attacks. By leveraging Splunk queries, I identified suspicious IP activities, tracked IP allocations, and improved network security monitoring. This project enhances incident response capabilities, helping administrators proactively detect and mitigate threats, ensuring a secure and well-managed DHCP infrastructure.
+In this project, I successfully analyzed DHCP logs using Splunk to detect network anomalies, including unauthorized devices, rogue DHCP servers, and DHCP starvation attacks. By leveraging Splunk queries, I identified suspicious IP activities, tracked IP allocations, and improved network security monitoring. This project enhances incident response capabilities, helping administrators proactively detect and mitigate threats, ensuring a secure and well-managed DHCP infrastructure.
 
 
 
