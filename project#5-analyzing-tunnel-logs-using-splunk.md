@@ -39,7 +39,7 @@ AAfter uploading the teredo log files, I navigated to the Search app and ran a q
 ## Steps to Extract Fields from teredo tunnel Log Files
 - Navigate to Field Extractions in Splunk.
 - Select Extract New Fields.
-- Choose a sample event from the uploaded DHCP logs.
+- Choose a sample event from the uploaded teredo tunnel logs.
 - Click on Regular Expression.
 - Identify the required fields and name them appropriately (e.g., IP Address, Status Code, Request Method, etc.).
 - Validate the extracted fields and save them.
