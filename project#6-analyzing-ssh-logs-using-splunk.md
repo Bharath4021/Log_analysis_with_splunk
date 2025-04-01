@@ -22,7 +22,7 @@ In this project, I explore SSH log file analysis to detect suspicious activities
 ## Step to Verify Uploaded File
 After uploading the SSH log files, I navigated to the Search app and ran a query filtered by my chosen index and sourcetype (e.g., index=*_logs sourcetype= SSH_logs) to display sample events. I carefully reviewed the event details to ensure that the content, timestamps, and fields were correctly indexed and free of errors.
 
-## Steps to Extract Fields from ssh Log Files
+## Steps to Extract Fields from SSH Log Files
 - Navigate to Field Extractions in Splunk.
 - Select Extract New Fields.
 - Choose a sample event from the uploaded ssh logs.
